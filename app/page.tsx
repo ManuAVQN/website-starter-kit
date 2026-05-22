@@ -49,6 +49,53 @@ export default function Home() {
           </p>
         </article>
       </section>
+
+      <section id="usages" className="mx-auto max-w-6xl px-6 pb-24">
+        <h2 className="mb-10 text-center text-3xl font-semibold text-white sm:text-4xl">
+          Pour quoi faire ?
+        </h2>
+        <div className="grid gap-6 sm:grid-cols-2">
+          <article id="usage-1" className="flex gap-5 rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div className="grid h-14 w-14 shrink-0 place-items-center rounded-xl bg-sky-500/20 text-2xl">🏠</div>
+            <div>
+              <h3 className="text-lg font-semibold text-white">Site vitrine</h3>
+              <p className="mt-1 text-sm text-slate-400">
+                Présenter ton activité, tes services, tes contacts.
+              </p>
+            </div>
+          </article>
+
+          <article id="usage-2" className="flex gap-5 rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div className="grid h-14 w-14 shrink-0 place-items-center rounded-xl bg-fuchsia-500/20 text-2xl">📣</div>
+            <div>
+              <h3 className="text-lg font-semibold text-white">Page de promo</h3>
+              <p className="mt-1 text-sm text-slate-400">
+                Lancer un produit, une offre, un événement.
+              </p>
+            </div>
+          </article>
+
+          <article id="usage-3" className="flex gap-5 rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div className="grid h-14 w-14 shrink-0 place-items-center rounded-xl bg-amber-500/20 text-2xl">🖼️</div>
+            <div>
+              <h3 className="text-lg font-semibold text-white">Portfolio</h3>
+              <p className="mt-1 text-sm text-slate-400">
+                Montrer tes projets, ton travail, tes réalisations.
+              </p>
+            </div>
+          </article>
+
+          <article id="usage-4" className="flex gap-5 rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div className="grid h-14 w-14 shrink-0 place-items-center rounded-xl bg-rose-500/20 text-2xl">✍️</div>
+            <div>
+              <h3 className="text-lg font-semibold text-white">Blog</h3>
+              <p className="mt-1 text-sm text-slate-400">
+                Écrire et partager des articles régulièrement.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
   );
 }
