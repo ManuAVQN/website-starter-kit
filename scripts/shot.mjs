@@ -23,6 +23,8 @@ const mode = process.argv[3] || "viewport";
 const target = process.argv[4];
 const out = process.argv[5] || "/tmp/site.png";
 const pad = parseInt(process.argv[6] || "0", 10);
+const clickBefore = process.argv[7]; // CSS selector à cliquer avant la capture (utile pour ouvrir des modales)
+const waitMs = parseInt(process.argv[8] || "300", 10); // attente après le clic
 
 if (!url) {
   console.error("Usage: node scripts/shot.mjs <url> [mode] [target] [out] [pad]");
@@ -36,6 +38,11 @@ const ctx = await browser.newContext({
 });
 const page = await ctx.newPage();
 await page.goto(url, { waitUntil: "networkidle" });
+
+if (clickBefore) {
+  await page.locator(clickBefore).click();
+  await page.waitForTimeout(waitMs);
+}
 
 if (mode === "full") {
   await page.screenshot({ path: out, fullPage: true });

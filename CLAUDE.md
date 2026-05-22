@@ -54,6 +54,10 @@ npm run shot -- http://localhost:3000 element "#bloc-2" /tmp/bloc.png
 
 # Élément avec une marge autour (dernier argument = px de padding)
 npm run shot -- http://localhost:3000 around "#bloc-2" /tmp/bloc.png 80
+
+# Cliquer un élément avant de capturer (ex : ouvrir une modale)
+# args supplémentaires : <selector à cliquer> <délai d'attente en ms>
+npm run shot -- http://localhost:3000 element "#info-modal" /tmp/m.png 0 "#open-info-modal" 500
 ```
 
 **Sur une sandbox fraîche**, lance `npm run shot:install` une seule fois pour télécharger le navigateur Chromium (≈100 Mo, ≈30 s). Ensuite les captures prennent 2–4 s.

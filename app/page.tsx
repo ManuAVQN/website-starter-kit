@@ -1,3 +1,5 @@
+import { InfoModal } from "./components/InfoModal";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950">
@@ -16,9 +18,7 @@ export default function Home() {
             <button className="rounded-full bg-green-500 px-10 py-5 text-lg font-semibold text-white shadow-lg shadow-green-500/30 transition hover:bg-green-400">
               Commencer
             </button>
-            <button className="rounded-full bg-yellow-400 px-10 py-5 text-lg font-semibold text-slate-900 shadow-lg shadow-yellow-400/30 transition hover:bg-yellow-300">
-              En savoir plus
-            </button>
+            <InfoModal />
           </div>
         </div>
       </section>
