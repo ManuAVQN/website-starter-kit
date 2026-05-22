@@ -11,6 +11,9 @@ export default function Home() {
         <p className="mt-4 text-slate-400">
           Modification poussée depuis Claude Code on the web.
         </p>
+        <button className="mt-8 rounded-full bg-pink-500 px-10 py-5 text-lg font-semibold text-white shadow-lg shadow-pink-500/30 transition hover:bg-pink-400">
+          Commencer
+        </button>
       </div>
     </main>
   );
