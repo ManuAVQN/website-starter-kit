@@ -38,3 +38,24 @@ L'utilisateur de ce projet n'est **pas développeur**. Adapte ta communication :
 ## Si quelque chose ne marche pas
 - Explique le problème en **langage courant** : "le site est temporairement indisponible", pas "503 Bad Gateway".
 - Propose une solution simple, sans détails techniques.
+
+## Outils internes
+
+### Captures d'écran (`scripts/shot.mjs`)
+
+Pour montrer un aperçu à l'utilisateur, utilise toujours ce script — pas besoin d'en réécrire un.
+
+```bash
+# Page entière
+npm run shot -- http://localhost:3000 full "" /tmp/full.png
+
+# Élément précis (CSS selector)
+npm run shot -- http://localhost:3000 element "#bloc-2" /tmp/bloc.png
+
+# Élément avec une marge autour (dernier argument = px de padding)
+npm run shot -- http://localhost:3000 around "#bloc-2" /tmp/bloc.png 80
+```
+
+**Sur une sandbox fraîche**, lance `npm run shot:install` une seule fois pour télécharger le navigateur Chromium (≈100 Mo, ≈30 s). Ensuite les captures prennent 2–4 s.
+
+**Convention** : donne un `id="..."` aux sections importantes de la page pour pouvoir les cibler en capture (ex: `#hero`, `#bloc-1`, `#footer`).
