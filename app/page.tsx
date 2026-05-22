@@ -33,10 +33,11 @@ export default function Home() {
         </article>
 
         <article id="bloc-2" className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur">
-          <div className="mb-4 grid h-12 w-12 place-items-center rounded-xl bg-pink-500/20 text-2xl">🎨</div>
+          <div className="mb-4 grid h-12 w-12 place-items-center rounded-xl bg-pink-500/20 text-2xl">👀</div>
           <h2 className="text-xl font-semibold text-white">Aperçu</h2>
           <p className="mt-2 text-slate-400">
-            Je te montre des images, tu valides ou tu corriges.
+            Je te montre des images,<br />
+            tu valides ou tu corriges.
           </p>
         </article>
 
